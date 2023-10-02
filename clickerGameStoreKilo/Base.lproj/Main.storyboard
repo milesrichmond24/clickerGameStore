@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8l5-f5-0cM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="clickerGameStoreKilo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gfo-lm-M6p">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cubes:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaJ-TD-nbl">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="170.33333333333334"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exu-9l-apZ">
+                                        <rect key="frame" x="0.0" y="170.33333333333334" width="393" height="511.33333333333326"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="click_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sG1-Yo-0cW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jo7-7E-CVJ">
+                                        <rect key="frame" x="0.0" y="681.66666666666663" width="393" height="85"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Store"/>
+                                        <connections>
+                                            <action selector="store_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FRM-7P-64N"/>
+                                        </connections>
+                                    </button>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zBM-24-59T">
+                                        <rect key="frame" x="0.0" y="767" width="393" height="85"/>
+                                        <items>
+                                            <navigationItem title="Home" id="92d-zS-Vda"/>
+                                        </items>
+                                    </navigationBar>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jo7-7E-CVJ" firstAttribute="height" secondItem="gfo-lm-M6p" secondAttribute="height" multiplier="0.1" id="7pY-RM-hh4"/>
+                                    <constraint firstItem="Exu-9l-apZ" firstAttribute="height" secondItem="gfo-lm-M6p" secondAttribute="height" multiplier="0.6" id="eCC-Qt-SDU"/>
+                                    <constraint firstItem="JaJ-TD-nbl" firstAttribute="height" secondItem="gfo-lm-M6p" secondAttribute="height" multiplier="0.2" id="ivi-3Q-Ko5"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gfo-lm-M6p" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="QUo-z3-Ery"/>
+                            <constraint firstItem="gfo-lm-M6p" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="dEl-Z5-v0Y"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hzH-HU-pOY"/>
+                    <connections>
+                        <outlet property="cubes_label" destination="JaJ-TD-nbl" id="wXg-l5-ZLs"/>
+                        <segue destination="4Gu-CJ-0bA" kind="show" identifier="toStore" id="JLy-Mi-HK2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134" y="37"/>
+        </scene>
+        <!--Store View Controller-->
+        <scene sceneID="fQT-A1-9xb">
+            <objects>
+                <viewController id="4Gu-CJ-0bA" customClass="StoreViewController" customModule="clickerGameStoreKilo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eU1-uD-zcF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vPr-ZZ-4G7">
+                                <rect key="frame" x="16" y="45" width="393" height="852"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8r-RL-Yta">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="83.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cubes:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoT-Sj-zP8">
+                                        <rect key="frame" x="0.0" y="83.666666666666671" width="393" height="42.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXT-BI-weE">
+                                        <rect key="frame" x="0.0" y="126.33333333333331" width="393" height="128"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Small Increase"/>
+                                        <connections>
+                                            <action selector="upgrade1_action:" destination="4Gu-CJ-0bA" eventType="touchUpInside" id="q8d-pV-kwJ"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upgrade 1 Cost:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axz-4e-lvb">
+                                        <rect key="frame" x="0.0" y="254.33333333333337" width="393" height="213"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2Z-fZ-UbN">
+                                        <rect key="frame" x="0.0" y="467.33333333333331" width="393" height="127.66666666666669"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Big Increase"/>
+                                        <connections>
+                                            <action selector="upgrade2_action:" destination="4Gu-CJ-0bA" eventType="touchUpInside" id="DqH-Wt-v1h"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upgrade 2 Cost:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgN-pX-w3T">
+                                        <rect key="frame" x="0.0" y="595" width="393" height="213"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vvw-IQ-Ksa">
+                                        <rect key="frame" x="0.0" y="808" width="393" height="44"/>
+                                        <items>
+                                            <navigationItem title="Store" id="iIy-nB-ax2"/>
+                                        </items>
+                                    </navigationBar>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qoT-Sj-zP8" firstAttribute="height" secondItem="vPr-ZZ-4G7" secondAttribute="height" multiplier="0.05" id="5uJ-uX-6fe"/>
+                                    <constraint firstItem="axz-4e-lvb" firstAttribute="height" secondItem="vPr-ZZ-4G7" secondAttribute="height" multiplier="0.25" id="PGZ-In-Xgg"/>
+                                    <constraint firstItem="O2Z-fZ-UbN" firstAttribute="height" secondItem="kXT-BI-weE" secondAttribute="height" id="Uh9-CM-jpj"/>
+                                    <constraint firstItem="bgN-pX-w3T" firstAttribute="height" secondItem="axz-4e-lvb" secondAttribute="height" id="Vgp-Vj-7YT"/>
+                                    <constraint firstItem="kXT-BI-weE" firstAttribute="height" secondItem="vPr-ZZ-4G7" secondAttribute="height" multiplier="0.15" id="pS3-Dq-Crj"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="brD-TM-GLr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vPr-ZZ-4G7" firstAttribute="height" secondItem="eU1-uD-zcF" secondAttribute="height" id="37d-Hn-59t"/>
+                            <constraint firstItem="vPr-ZZ-4G7" firstAttribute="width" secondItem="eU1-uD-zcF" secondAttribute="width" id="m91-QG-SgS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fCp-TK-dlM"/>
+                    <connections>
+                        <outlet property="cubeCount_label" destination="qoT-Sj-zP8" id="6KD-n4-BW5"/>
+                        <outlet property="upgrade1Cost_label" destination="axz-4e-lvb" id="Pjy-Gs-KxM"/>
+                        <outlet property="upgrade2Cost_label" destination="bgN-pX-w3T" id="ckY-VQ-naY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bCf-A3-4Pw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2345.801526717557" y="400.7042253521127"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Q2S-AV-yVA">
+            <objects>
+                <navigationController id="8l5-f5-0cM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dTc-Tr-P8d">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9xI-eQ-zFX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MF0-aL-jZd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="192" y="101"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
